@@ -75,3 +75,23 @@ total = multiply(4, 5)
 print(total)              # 20
 print(multiply(2, 3))     # 6
 
+# ===== LABELLED PARAMETERS (keyword arguments) =====
+
+# when we call a function, we can write parameter=value
+# the ORDER does not matter anymore
+
+def greet_full(first, last):
+    print("Hello", first, last)
+
+greet_full(first="Moussa", last="Youco")
+greet_full(last="Youco", first="Moussa")  # same result, order changed
+
+# default values: we write =value inside the def
+# then we can call the function without that argument
+
+def greet(name="guest"):
+    print("Hello", name)
+
+greet()          # uses the default -> Hello guest
+greet("Youco")   # no default here -> Hello Youco
+
