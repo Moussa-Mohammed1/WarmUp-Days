@@ -39,11 +39,13 @@ dev1.add_skill("Kanban")
 from datetime import datetime
 
 class BankAccount:
+    account_count = 0
     def __init__(self, owner, balance):
         self.__owner = owner
         self.__balance = balance
         self.__updated_at = None
         self.__created_at = datetime.now()
+        account_count += 1
     def deposit(self, amount):
         self.__balance += amount
         return self.__balance
