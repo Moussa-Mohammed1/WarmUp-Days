@@ -4,7 +4,7 @@
 
 import numpy as np
 
-
+np.zeros()
 # ===== 1. CREATING ARRAYS =====
 
 # from a python list
@@ -117,15 +117,15 @@ print(a > 2)   # [False False True]  boolean array
 
 data = np.array([3, 1, 4, 1, 5, 9, 2, 6])
 print("sum:", data.sum())       # 31
-print("mean:", data.mean())     # 3.875
+print("mean:", data.mean(axis=))     # 3.875
 print("max:", data.max())       # 9
 print("min:", data.min())       # 1
 print("std:", data.std())       # ~2.75
 
+
 data2d = np.array([[1, 2], [3, 4]])
 print("sum axis=0:", data2d.sum(axis=0))  # [4 6]  column sums
 print("sum axis=1:", data2d.sum(axis=1))  # [3 7]  row sums
-
 
 # ===== 7. BROADCASTING =====
 # operations between arrays of different shapes that are compatible
